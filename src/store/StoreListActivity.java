@@ -1,14 +1,17 @@
 package store;
 
+import main.MainActivity;
 import shop.Shop;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +21,7 @@ public class StoreListActivity extends Activity {
 
 	TextView title, floors;
 	GridView gridView;
+	private ImageButton btTopBack, btDownBack, btHome, btProduct;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class StoreListActivity extends Activity {
 		gridView = (GridView) findViewById(R.id.storeListGridView);
 		ImageView nextFloor = (ImageView) findViewById(R.id.iv_nextfloor);
 		ImageView preFloor = (ImageView) findViewById(R.id.iv_prefloor);
+		
+		setImgBtn();
 
 		Intent intent = getIntent();
 		String complex = intent.getStringExtra("complex");
@@ -76,6 +82,42 @@ public class StoreListActivity extends Activity {
 
 		title.setTypeface(yoonGodic350);
 		floors.setTypeface(yoonGodic350);
+	}
+
+	private void setImgBtn() {
+		btTopBack = (ImageButton) findViewById(R.id.btnStoreListTopBack);
+		btTopBack.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				finish();
+			}
+		});
+		btDownBack = (ImageButton) findViewById(R.id.btnStoreListDownBack);
+		btDownBack.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				finish();
+			}
+		});
+
+		btHome = (ImageButton) findViewById(R.id.btnStoreListHome);
+		btHome.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+			}
+		});
+
+		btProduct = (ImageButton) findViewById(R.id.btnStoreListProduct);
+		btProduct.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(getApplicationContext(), FavoriteProductListActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 }

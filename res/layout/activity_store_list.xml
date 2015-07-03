@@ -39,7 +39,7 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/imageButton33"
+                    android:id="@+id/btnStoreListTopBack"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="65"
@@ -256,7 +256,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageButton99"
+                android:id="@+id/btnStoreListDownBack"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -270,7 +270,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/ImageButton77"
+                android:id="@+id/btnStoreListHome"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -284,7 +284,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/ImageButton88"
+                android:id="@+id/btnStoreListProduct"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"

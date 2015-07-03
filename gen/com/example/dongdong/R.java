@@ -219,9 +219,7 @@ public final class R {
     public static final class id {
         public static final int ImageButton01=0x7f0a0026;
         public static final int ImageButton02=0x7f0a0027;
-        public static final int ImageButton77=0x7f0a0030;
-        public static final int ImageButton88=0x7f0a0031;
-        public static final int action_settings=0x7f0a00c9;
+        public static final int action_settings=0x7f0a00cc;
         public static final int backBtn=0x7f0a0017;
         public static final int backpage=0x7f0a0075;
         public static final int btMailSend=0x7f0a005a;
@@ -243,6 +241,13 @@ public final class R {
         public static final int btnMyPageFavor=0x7f0a0015;
         public static final int btnMyPageHome=0x7f0a0014;
         public static final int btnMyPageTopBack=0x7f0a0008;
+        public static final int btnSearchDownBack=0x7f0a00c5;
+        public static final int btnSearchHome=0x7f0a00c6;
+        public static final int btnSearchProduct=0x7f0a00c7;
+        public static final int btnStoreListDownBack=0x7f0a002f;
+        public static final int btnStoreListHome=0x7f0a0030;
+        public static final int btnStoreListProduct=0x7f0a0031;
+        public static final int btnStoreListTopBack=0x7f0a0028;
         public static final int cancel=0x7f0a00c2;
         public static final int cart=0x7f0a0077;
         public static final int check=0x7f0a0082;
@@ -271,7 +276,7 @@ public final class R {
         public static final int favoriteProductTitle=0x7f0a0001;
         public static final int fl_viewflipper=0x7f0a0068;
         public static final int floors=0x7f0a002c;
-        public static final int fram=0x7f0a00c7;
+        public static final int fram=0x7f0a00ca;
         public static final int gridView=0x7f0a0024;
         public static final int home=0x7f0a0076;
         public static final int image=0x7f0a00c3;
@@ -281,12 +286,10 @@ public final class R {
         public static final int imageBtn3=0x7f0a0002;
         public static final int imageBtn4=0x7f0a0003;
         public static final int imageButton3=0x7f0a0022;
-        public static final int imageButton33=0x7f0a0028;
         public static final int imageButton4=0x7f0a0023;
         public static final int imageButton44=0x7f0a002a;
         public static final int imageButton441=0x7f0a004f;
         public static final int imageButton5=0x7f0a0025;
-        public static final int imageButton99=0x7f0a002f;
         public static final int intro=0x7f0a0060;
         public static final int iv_accessory=0x7f0a003e;
         public static final int iv_back=0x7f0a0094;
@@ -385,12 +388,12 @@ public final class R {
         public static final int storeListTitle=0x7f0a0029;
         public static final int storeLocation=0x7f0a001b;
         public static final int storeLocation2=0x7f0a001c;
-        public static final int storeName=0x7f0a00c8;
+        public static final int storeName=0x7f0a00cb;
         public static final int storeProductNum=0x7f0a001d;
         public static final int storeProductNum2=0x7f0a001e;
         public static final int storeTag=0x7f0a0021;
         public static final int storeTitle=0x7f0a0019;
-        public static final int text1=0x7f0a00c5;
+        public static final int text1=0x7f0a00c8;
         public static final int topLayout=0x7f0a0089;
         public static final int tvContent=0x7f0a0052;
         public static final int tvUserEmail=0x7f0a0050;
@@ -412,7 +415,7 @@ public final class R {
         public static final int tv_reg_date=0x7f0a00b9;
         public static final int tv_reply_cnt=0x7f0a009f;
         public static final int tv_reply_upload=0x7f0a00a6;
-        public static final int tv_spitem=0x7f0a00c6;
+        public static final int tv_spitem=0x7f0a00c9;
         public static final int tv_title=0x7f0a008b;
         public static final int tv_user_id=0x7f0a00a9;
         public static final int tv_warning=0x7f0a007d;

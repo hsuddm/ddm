@@ -37,60 +37,84 @@
 
         <GridView
             android:id="@+id/gridView"
-            android:listSelector="@null"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:verticalSpacing="1dp"
             android:horizontalSpacing="1dp"
+            android:listSelector="@null"
             android:numColumns="3"
             android:stretchMode="columnWidth"
-            />
+            android:verticalSpacing="1dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="160"
-        android:background="#000000"
-        android:padding="5dp" >
+        android:layout_weight="175"
+        android:background="@color/tab_background_bg"
+        android:orientation="vertical" >
 
         <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.4"
-            android:scaleType="fitCenter" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:orientation="vertical" />
 
-        <ImageView
-            android:id="@+id/backpage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="55" >
 
-        <ImageView
-            android:id="@+id/home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter" />
-        <ImageView
-            android:id="@+id/favorite"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="202.5"
+                android:orientation="vertical" />
 
-        <ImageView
-            android:id="@+id/cart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="fitCenter" />
+            <ImageButton
+                android:id="@+id/btnSearchDownBack"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="55"
+                android:background="@drawable/default_back_button_selector"
+                android:scaleType="fitXY" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="255" />
+
+            <ImageButton
+                android:id="@+id/btnSearchHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="55"
+                android:background="@drawable/default_home_button_selector"
+                android:scaleType="fitXY" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="255" />
+
+            <ImageButton
+                android:id="@+id/btnSearchProduct"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="55"
+                android:background="@drawable/default_menu_button_selector"
+                android:scaleType="fitXY" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="202.5" />
+        </LinearLayout>
 
         <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.4"
-            android:scaleType="fitCenter" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:orientation="vertical" />
     </LinearLayout>
 
 </LinearLayout>
