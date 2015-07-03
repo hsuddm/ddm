@@ -1,6 +1,7 @@
 package cunsumercenter;
 
 import main.MainActivity;
+import store.FavoriteProductListActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -24,7 +25,7 @@ public class MailActivity extends Activity {
 	private String mailSubject = "오류문의";;
 	private RadioButton btRadio1, btRadio2, btRadio3, btRadio4, btRadio5, btRadio6;
 	private Button btMailSend;
-	private ImageButton btTopBack, btDownBack, btHome;
+	private ImageButton btTopBack, btDownBack, btHome, btProduct;
 	
 	private Typeface tf310;
 
@@ -204,6 +205,16 @@ public class MailActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+		btProduct = (ImageButton) findViewById(R.id.btnMailProduct);
+		btProduct.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(getApplicationContext(), FavoriteProductListActivity.class);				
+				startActivity(intent);
+			}
+		});
+		
 		
 	}
 }

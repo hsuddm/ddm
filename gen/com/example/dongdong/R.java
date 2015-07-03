@@ -223,7 +223,6 @@ public final class R {
         public static final int ImageButton02=0x7f0a0027;
         public static final int ImageButton77=0x7f0a0030;
         public static final int ImageButton88=0x7f0a0031;
-        public static final int ImageButton881=0x7f0a005d;
         public static final int Imtton02=0x7f0a0015;
         public static final int Iutton01=0x7f0a0014;
         public static final int action_settings=0x7f0a00c9;
@@ -238,6 +237,7 @@ public final class R {
         public static final int btRadio6=0x7f0a0058;
         public static final int btnMailDownBack=0x7f0a005b;
         public static final int btnMailHome=0x7f0a005c;
+        public static final int btnMailProduct=0x7f0a005d;
         public static final int btnMailTopBack=0x7f0a004d;
         public static final int cancel=0x7f0a00c2;
         public static final int cart=0x7f0a0077;

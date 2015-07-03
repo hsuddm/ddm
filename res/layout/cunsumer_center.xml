@@ -380,7 +380,7 @@
                 android:layout_weight="255" />
 
             <ImageButton
-                android:id="@+id/ImageButton881"
+                android:id="@+id/btnMailProduct"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
