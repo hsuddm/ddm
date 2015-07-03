@@ -2,6 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@drawable/default_btn_back_normal" android:state_pressed="false"/>
-    <item android:drawable="@drawable/test_btn_selected" android:state_pressed="true"/>
+    <item android:drawable="@drawable/default_btn_back_normal" android:state_pressed="true"/>
 
 </selector>

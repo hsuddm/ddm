@@ -3,6 +3,7 @@ package category;
 import java.util.regex.Pattern;
 
 import search.SearchViewActivity;
+import store.FavoriteProductListActivity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -101,6 +103,14 @@ public class CategoryManActivity extends Activity {
 					intent.putExtra("keyword", keyword);
 					startActivity(intent);
 				}
+			}
+		});
+		
+		iv_wish.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), FavoriteProductListActivity.class);				
+				startActivity(intent);
 			}
 		});
 

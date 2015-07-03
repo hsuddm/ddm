@@ -2,6 +2,7 @@ package category;
 
 import java.util.regex.Pattern;
 
+import store.FavoriteProductListActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -10,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,9 +23,7 @@ public class CategoryShopMallActivity extends Activity {
 
 	LinearLayout linearlayout_shop_mall, ll_search_bar, ll_category_bg;
 	EditText et_search_bar;
-	ImageView iv_search_btn, iv_backpage, iv_home, iv_wish, iv_storelist_apm,
-			iv_storelist_good, iv_storelist_mac, iv_storelist_migliore,
-			iv_storelist_lotte, iv_storelist_ready;
+	ImageView iv_search_btn, iv_backpage, iv_home, iv_wish, iv_storelist_apm, iv_storelist_good, iv_storelist_mac, iv_storelist_migliore, iv_storelist_lotte, iv_storelist_ready;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,7 @@ public class CategoryShopMallActivity extends Activity {
 		// et_search_bar.setPadding(100, 0, 0, 0);
 
 		String fontpath = "fonts/yoonGothic310.ttf";
-		Typeface tf = Typeface.createFromAsset(CategoryShopMallActivity.this
-				.getResources().getAssets(), fontpath);
+		Typeface tf = Typeface.createFromAsset(CategoryShopMallActivity.this.getResources().getAssets(), fontpath);
 
 		et_search_bar.setTypeface(tf);
 		et_search_bar.setOnKeyListener(new View.OnKeyListener() {
@@ -59,14 +58,11 @@ public class CategoryShopMallActivity extends Activity {
 					// search();
 					String getTxt = et_search_bar.getText().toString();
 					if (getTxt.getBytes().length <= 0) {
-						Toast.makeText(getApplicationContext(),
-								"寃��깋�뼱瑜� �엯�젰�븯�꽭�슂", Toast.LENGTH_LONG)
-								.show();
+						Toast.makeText(getApplicationContext(), "寃��깋�뼱瑜� �엯�젰�븯�꽭�슂", Toast.LENGTH_LONG).show();
 					} else {
 						String keyword = et_search_bar.getText().toString();
 
-						Intent intent = new Intent(getApplicationContext(),
-								search.SearchViewActivity.class);
+						Intent intent = new Intent(getApplicationContext(), search.SearchViewActivity.class);
 						intent.putExtra("keyword", keyword);
 						startActivity(intent);
 					}
@@ -81,14 +77,12 @@ public class CategoryShopMallActivity extends Activity {
 			public void onClick(View v) {
 				String getTxt = et_search_bar.getText().toString();
 				if (getTxt.getBytes().length <= 0) {
-					Toast.makeText(getApplicationContext(),
-							"寃��깋�뼱瑜� �엯�젰�븯�꽭�슂", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "寃��깋�뼱瑜� �엯�젰�븯�꽭�슂", Toast.LENGTH_LONG).show();
 				} else {
 					// TODO Auto-generated method stub
 					String keyword = et_search_bar.getText().toString();
 
-					Intent intent = new Intent(getApplicationContext(),
-							search.SearchViewActivity.class);
+					Intent intent = new Intent(getApplicationContext(), search.SearchViewActivity.class);
 					intent.putExtra("keyword", keyword);
 					startActivity(intent);
 				}
@@ -99,14 +93,12 @@ public class CategoryShopMallActivity extends Activity {
 			String txt;
 
 			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 				txt = s.toString();
 			}
 
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+			public void onTextChanged(CharSequence s, int start, int before, int count) {
 
 			}
 
@@ -114,8 +106,7 @@ public class CategoryShopMallActivity extends Activity {
 			public void afterTextChanged(Editable s) {
 				int length = s.toString().length();
 				if (length > 0) {
-					Pattern ps = Pattern
-							.compile("^[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ\u318D\u119E\u11A2\u2022\u2025a\u00B7\uFE55]+$");
+					Pattern ps = Pattern.compile("^[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ\u318D\u119E\u11A2\u2022\u2025a\u00B7\uFE55]+$");
 					if (!ps.matcher(s).matches()) {
 						et_search_bar.setText(txt);
 						et_search_bar.setSelection(et_search_bar.length());
@@ -134,8 +125,7 @@ public class CategoryShopMallActivity extends Activity {
 		iv_home.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						main.MainActivity.class);
+				Intent intent = new Intent(getApplicationContext(), main.MainActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 			}
@@ -144,8 +134,7 @@ public class CategoryShopMallActivity extends Activity {
 		iv_storelist_apm.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						store.StoreListActivity.class);
+				Intent intent = new Intent(getApplicationContext(), store.StoreListActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra("complex", "APM");
 				startActivity(intent);
@@ -154,8 +143,7 @@ public class CategoryShopMallActivity extends Activity {
 		iv_storelist_migliore.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						store.StoreListActivity.class);
+				Intent intent = new Intent(getApplicationContext(), store.StoreListActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra("complex", "MIGLIORE");
 				startActivity(intent);
@@ -164,8 +152,7 @@ public class CategoryShopMallActivity extends Activity {
 		iv_storelist_good.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						store.StoreListActivity.class);
+				Intent intent = new Intent(getApplicationContext(), store.StoreListActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra("complex", "GOOD");
 				startActivity(intent);
@@ -174,8 +161,7 @@ public class CategoryShopMallActivity extends Activity {
 		iv_storelist_lotte.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						store.StoreListActivity.class);
+				Intent intent = new Intent(getApplicationContext(), store.StoreListActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra("complex", "LOTTE");
 				startActivity(intent);
@@ -184,14 +170,21 @@ public class CategoryShopMallActivity extends Activity {
 		iv_storelist_mac.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getApplicationContext(),
-						store.StoreListActivity.class);
+				Intent intent = new Intent(getApplicationContext(), store.StoreListActivity.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				intent.putExtra("complex", "MAC");
 				startActivity(intent);
 			}
 		});
 		
+		iv_wish.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), FavoriteProductListActivity.class);				
+				startActivity(intent);
+			}
+		});
+
 	}
 
 	protected void onStart() {
@@ -235,24 +228,12 @@ public class CategoryShopMallActivity extends Activity {
 
 		double height = ll_category_bg.getHeight();
 
-		iv_storelist_apm.setPadding((int) (weight * 0.111),
-				(int) (height * 0.053), (int) (weight * 0.037),
-				(int) (height * 0.027));
-		iv_storelist_good.setPadding((int) (weight * 0.111),
-				(int) (height * 0.027), (int) (weight * 0.037),
-				(int) (height * 0.027));
-		iv_storelist_mac.setPadding((int) (weight * 0.111),
-				(int) (height * 0.027), (int) (weight * 0.037),
-				(int) (height * 0.053));
-		iv_storelist_migliore.setPadding((int) (weight * 0.037),
-				(int) (height * 0.053), (int) (weight * 0.111),
-				(int) (height * 0.027));
-		iv_storelist_lotte.setPadding((int) (weight * 0.037),
-				(int) (height * 0.027), (int) (weight * 0.111),
-				(int) (height * 0.027));
-		iv_storelist_ready.setPadding((int) (weight * 0.037),
-				(int) (height * 0.027), (int) (weight * 0.111),
-				(int) (height * 0.053));
+		iv_storelist_apm.setPadding((int) (weight * 0.111), (int) (height * 0.053), (int) (weight * 0.037), (int) (height * 0.027));
+		iv_storelist_good.setPadding((int) (weight * 0.111), (int) (height * 0.027), (int) (weight * 0.037), (int) (height * 0.027));
+		iv_storelist_mac.setPadding((int) (weight * 0.111), (int) (height * 0.027), (int) (weight * 0.037), (int) (height * 0.053));
+		iv_storelist_migliore.setPadding((int) (weight * 0.037), (int) (height * 0.053), (int) (weight * 0.111), (int) (height * 0.027));
+		iv_storelist_lotte.setPadding((int) (weight * 0.037), (int) (height * 0.027), (int) (weight * 0.111), (int) (height * 0.027));
+		iv_storelist_ready.setPadding((int) (weight * 0.037), (int) (height * 0.027), (int) (weight * 0.111), (int) (height * 0.053));
 
 	}
 

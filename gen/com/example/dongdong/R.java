@@ -221,8 +221,6 @@ public final class R {
         public static final int ImageButton02=0x7f0a0027;
         public static final int ImageButton77=0x7f0a0030;
         public static final int ImageButton88=0x7f0a0031;
-        public static final int Imtton02=0x7f0a0015;
-        public static final int Iutton01=0x7f0a0014;
         public static final int action_settings=0x7f0a00c9;
         public static final int backBtn=0x7f0a0017;
         public static final int backpage=0x7f0a0075;
@@ -241,6 +239,10 @@ public final class R {
         public static final int btnMailHome=0x7f0a005c;
         public static final int btnMailProduct=0x7f0a005d;
         public static final int btnMailTopBack=0x7f0a004d;
+        public static final int btnMyPageDownBack=0x7f0a0013;
+        public static final int btnMyPageFavor=0x7f0a0015;
+        public static final int btnMyPageHome=0x7f0a0014;
+        public static final int btnMyPageTopBack=0x7f0a0008;
         public static final int cancel=0x7f0a00c2;
         public static final int cart=0x7f0a0077;
         public static final int check=0x7f0a0082;
@@ -285,8 +287,6 @@ public final class R {
         public static final int imageButton441=0x7f0a004f;
         public static final int imageButton5=0x7f0a0025;
         public static final int imageButton99=0x7f0a002f;
-        public static final int imaon1=0x7f0a0008;
-        public static final int imautton5=0x7f0a0013;
         public static final int intro=0x7f0a0060;
         public static final int iv_accessory=0x7f0a003e;
         public static final int iv_back=0x7f0a0094;

@@ -35,18 +35,15 @@ public class StoreListActivity extends Activity {
 		// setFont();
 		final GetStoresData gsd = new GetStoresData(complex);
 		// 임시로 GOOD for test
-		final StorePageGridViewAdapter spAdapter = new StorePageGridViewAdapter(
-				"GOOD", this);
+		final StorePageGridViewAdapter spAdapter = new StorePageGridViewAdapter("GOOD", this);
 		gridView.setAdapter(spAdapter);
 
 		gridView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long arg3) {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long arg3) {
 
-				Intent intent = new Intent(getApplicationContext(),
-						StoreInfoActivity.class);
+				Intent intent = new Intent(getApplicationContext(), StoreInfoActivity.class);
 
 				Shop shop = spAdapter.getShop(position);
 				intent.putExtra("SHOP", shop);
@@ -75,8 +72,7 @@ public class StoreListActivity extends Activity {
 	}
 
 	public void setFont() {
-		Typeface yoonGodic350 = Typeface.createFromAsset(getAssets(),
-				"fonts/yoonGothic350.ttf");
+		Typeface yoonGodic350 = Typeface.createFromAsset(getAssets(), "fonts/yoonGothic350.ttf");
 
 		title.setTypeface(yoonGodic350);
 		floors.setTypeface(yoonGodic350);

@@ -1,13 +1,9 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import mypage.MyPageActivity;
-import notice.GetNoticeData;
-import notice.Notice;
-import notice.NoticeListViewAdapter;
 import product.Product;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -80,10 +76,10 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 	ListView lv_notice_list = null;
 	ListView lv_notice_main;
-//	NoticeAdapter mNoticeAdapter = null;
-//	NoticeAdapter mNoticeAdapter1 = null;
-//	ArrayList<Notice> mData = null;
-//	ArrayList<Notice> mData1 = null;
+	//	NoticeAdapter mNoticeAdapter = null;
+	//	NoticeAdapter mNoticeAdapter1 = null;
+	//	ArrayList<Notice> mData = null;
+	//	ArrayList<Notice> mData1 = null;
 
 	LinearLayout ll_category;
 
@@ -98,8 +94,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_page);
 		context = this.getApplicationContext();
-		LayoutInflater inflater = (LayoutInflater) context
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		inflater.inflate(R.layout.main_page, null, true);
 		ll_flipper = (ViewFlipper) findViewById(R.id.ll_flipper);
 		m_viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
@@ -111,12 +106,8 @@ public class MainActivity extends Activity implements OnTouchListener {
 		final String id = intent.getStringExtra("email");
 		Toast.makeText(this, id, Toast.LENGTH_LONG).show();
 
-		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.WRAP_CONTENT,
-				LinearLayout.LayoutParams.WRAP_CONTENT);
-		LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.MATCH_PARENT,
-				LinearLayout.LayoutParams.MATCH_PARENT);
+		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+		LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 
 		indexButtons = new ImageView[countIndexes];
 		views = new ImageView[countIndexes];
@@ -132,35 +123,35 @@ public class MainActivity extends Activity implements OnTouchListener {
 		m_viewFlipper.startFlipping();
 		ll_flipper.startFlipping();
 
-//		mData = new ArrayList<Notice>();
+		//		mData = new ArrayList<Notice>();
 
-//		for (int i = 0; i < 7; i++) {
-//			Notice notice = new Notice();
-//			notice.mNotice = "[공지사항]   " + i;
-//			mData.add(notice);
-//		}
-//
-//		mNoticeAdapter = new NoticeAdapter(this, mData);
-//		lv_notice_list = (ListView) findViewById(R.id.lv_notice_list);
-//		lv_notice_list.setAdapter(mNoticeAdapter);
-//		lv_notice_list.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-//		lv_notice_list.setDivider(new ColorDrawable(Color.BLACK));
-//		lv_notice_list.setDividerHeight(1);
-//
-//		mData1 = new ArrayList<Notice>();
+		//		for (int i = 0; i < 7; i++) {
+		//			Notice notice = new Notice();
+		//			notice.mNotice = "[공지사항]   " + i;
+		//			mData.add(notice);
+		//		}
+		//
+		//		mNoticeAdapter = new NoticeAdapter(this, mData);
+		//		lv_notice_list = (ListView) findViewById(R.id.lv_notice_list);
+		//		lv_notice_list.setAdapter(mNoticeAdapter);
+		//		lv_notice_list.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		//		lv_notice_list.setDivider(new ColorDrawable(Color.BLACK));
+		//		lv_notice_list.setDividerHeight(1);
+		//
+		//		mData1 = new ArrayList<Notice>();
 
-//		for (int i = 0; i < 2; i++) {
-//			Notice notice = new Notice();
-//			notice.mNotice = "[공지사항]   " + i;
-//			mData1.add(notice);
-//		}
-//		mNoticeAdapter1 = new NoticeAdapter(this, mData1);
-//		lv_notice_main = (ListView) findViewById(R.id.lv_notice_main);
-//		lv_notice_main.setAdapter(mNoticeAdapter1);
-//		lv_notice_main.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-//		lv_notice_main.setDivider(new ColorDrawable(Color.BLACK));
-//		lv_notice_main.setDividerHeight(1);
-//
+		//		for (int i = 0; i < 2; i++) {
+		//			Notice notice = new Notice();
+		//			notice.mNotice = "[공지사항]   " + i;
+		//			mData1.add(notice);
+		//		}
+		//		mNoticeAdapter1 = new NoticeAdapter(this, mData1);
+		//		lv_notice_main = (ListView) findViewById(R.id.lv_notice_main);
+		//		lv_notice_main.setAdapter(mNoticeAdapter1);
+		//		lv_notice_main.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		//		lv_notice_main.setDivider(new ColorDrawable(Color.BLACK));
+		//		lv_notice_main.setDividerHeight(1);
+		//
 		ll_notice = (LinearLayout) findViewById(R.id.ll_notice);
 
 		ll_category = (LinearLayout) findViewById(R.id.ll_category);
@@ -184,8 +175,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 		et_search_bar.setPadding(100, 0, 0, 0);
 
 		String fontpath1 = "fonts/yoonGothic310.ttf";
-		Typeface tf1 = Typeface.createFromAsset(MainActivity.this
-				.getResources().getAssets(), fontpath1);
+		Typeface tf1 = Typeface.createFromAsset(MainActivity.this.getResources().getAssets(), fontpath1);
 
 		et_search_bar.setTypeface(tf1);
 
@@ -194,8 +184,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(getApplicationContext(),
-						category.CategoryManActivity.class);
+				Intent intent = new Intent(getApplicationContext(), category.CategoryManActivity.class);
 				startActivity(intent);
 
 			}
@@ -206,8 +195,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(getApplicationContext(),
-						category.CategoryShopMallActivity.class);
+				Intent intent = new Intent(getApplicationContext(), category.CategoryShopMallActivity.class);
 				startActivity(intent);
 
 			}
@@ -218,8 +206,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(getApplicationContext(),
-						category.CategoryWomanActivity.class);
+				Intent intent = new Intent(getApplicationContext(), category.CategoryWomanActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -232,19 +219,16 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 					String getTxt = et_search_bar.getText().toString();
 					if (getTxt.getBytes().length <= 0) {
-						Toast.makeText(getApplicationContext(), "검색어를 입력해 주세요",
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(), "검색어를 입력해 주세요", Toast.LENGTH_LONG).show();
 
 					} else if (Namevalidate(getTxt) == false) {
 						{
-							Toast.makeText(getApplicationContext(),
-									"검색어를 확인해 주세요", Toast.LENGTH_LONG).show();
+							Toast.makeText(getApplicationContext(), "검색어를 확인해 주세요", Toast.LENGTH_LONG).show();
 						}
 					} else {
 						String keyword = et_search_bar.getText().toString();
 
-						Intent intent = new Intent(getApplicationContext(),
-								search.SearchViewActivity.class);
+						Intent intent = new Intent(getApplicationContext(), search.SearchViewActivity.class);
 						intent.putExtra("keyword", keyword);
 						intent.putExtra("email", id);
 						intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -279,8 +263,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 		backpage.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(),
-						"�룯�뜃由� 占쎌넅筌롳옙 占쎌뿯占쎈빍占쎈뼄", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "�룯�뜃由� 占쎌넅筌롳옙 占쎌뿯占쎈빍占쎈뼄", Toast.LENGTH_LONG).show();
 			}
 		});
 		ImageView home = (ImageView) findViewById(R.id.home);
@@ -288,8 +271,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "占쎌냳 占쎌넅筌롳옙 占쎌뿯占쎈빍占쎈뼄",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "占쎌냳 占쎌넅筌롳옙 占쎌뿯占쎈빍占쎈뼄", Toast.LENGTH_LONG).show();
 			}
 		});
 
@@ -299,20 +281,17 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 				String getTxt = et_search_bar.getText().toString();
 				if (Namevalidate(getTxt) == false) {
-					Toast.makeText(getApplicationContext(), "검색어를 확인해 주세요",
-							Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "검색어를 확인해 주세요", Toast.LENGTH_LONG).show();
 					return;
 				}
 				if (getTxt.getBytes().length <= 0) {
-					Toast.makeText(getApplicationContext(), "검색어를 입력해 주세요",
-							Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "검색어를 입력해 주세요", Toast.LENGTH_LONG).show();
 
 				} else {
 					// TODO Auto-generated method stub
 					String keyword = et_search_bar.getText().toString();
 
-					Intent intent = new Intent(getApplicationContext(),
-							search.SearchViewActivity.class);
+					Intent intent = new Intent(getApplicationContext(), search.SearchViewActivity.class);
 					intent.putExtra("keyword", keyword);
 					intent.putExtra("email", id);
 					intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -325,38 +304,32 @@ public class MainActivity extends Activity implements OnTouchListener {
 			@Override
 			public void onClick(View v) {
 
-				Intent intent = new Intent(getApplicationContext(),
-						MyPageActivity.class);
+				Intent intent = new Intent(getApplicationContext(), MyPageActivity.class);
 				startActivity(intent);
 
 			}
 		});
 
 		if (!isNetworkConnected(this)) {
-			new AlertDialog.Builder(this)
-					.setIcon(android.R.drawable.ic_dialog_alert)
-					.setTitle("占쎄퐬占쎈뱜占쎌뜖占쎄쾿 占쎈염野껓옙 占쎌궎�몴占�")
-					.setMessage(
-							"占쎄퐬占쎈뱜占쎌뜖占쎄쾿 占쎈염野껓옙 占쎄맒占쎄묶 占쎌넇占쎌뵥 占쎌뜎 占쎈뼄占쎈뻻 占쎈뻻占쎈즲占쎈퉸 雅뚯눘�뼏占쎈뻻占쎌뒄.")
-					.setPositiveButton("占쎌넇占쎌뵥",
-							new DialogInterface.OnClickListener() {
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									finish();
-								}
-							}).show();
+			new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("占쎄퐬占쎈뱜占쎌뜖占쎄쾿 占쎈염野껓옙 占쎌궎�몴占�")
+																							.setMessage("占쎄퐬占쎈뱜占쎌뜖占쎄쾿 占쎈염野껓옙 占쎄맒占쎄묶 占쎌넇占쎌뵥 占쎌뜎 占쎈뼄占쎈뻻 占쎈뻻占쎈즲占쎈퉸 雅뚯눘�뼏占쎈뻻占쎌뒄.")
+																							.setPositiveButton("占쎌넇占쎌뵥", new DialogInterface.OnClickListener() {
+																								@Override
+																								public void onClick(DialogInterface dialog, int which) {
+																									finish();
+																								}
+																							}).show();
 		}
 	}
-	
-//	private void setNotice(){
-//		GetNoticeData gnd = new GetNoticeData();
-//		ArrayList<Notice> noticeData = gnd.excute();
-//		
-//		lv_notice_main.setAdapter(new NoticeListViewAdapter(MainActivity.this
-//				.getApplicationContext(), noticeData));
-//		
-//	}
+
+	//	private void setNotice(){
+	//		GetNoticeData gnd = new GetNoticeData();
+	//		ArrayList<Notice> noticeData = gnd.excute();
+	//		
+	//		lv_notice_main.setAdapter(new NoticeListViewAdapter(MainActivity.this
+	//				.getApplicationContext(), noticeData));
+	//		
+	//	}
 
 	private static final String Name_PATTERN = "^(?=.*[가-힣a-zA-Z0-9])(?=[\\S]+$).{0,10}$";
 
@@ -370,7 +343,7 @@ public class MainActivity extends Activity implements OnTouchListener {
 	protected void onStart() {
 
 		super.onStart();
-//		setNotice();
+		//		setNotice();
 		views[0].setBackgroundResource(R.drawable.main_banner_1);
 		views[1].setBackgroundResource(R.drawable.main_banner_2);
 		views[2].setBackgroundResource(R.drawable.main_banner_3);
@@ -433,19 +406,12 @@ public class MainActivity extends Activity implements OnTouchListener {
 		double height = ll_search.getHeight();
 		double width = ll_search.getWidth();
 		double ll_height = ll_category.getHeight();
-		ll_search
-				.setPadding(0, (int) (height * 0.21), 0, (int) (height * 0.21));
+		ll_search.setPadding(0, (int) (height * 0.21), 0, (int) (height * 0.21));
 
-		iv_man_btn.setPadding((int) (width * 0.10), (int) (ll_height * 0.11),
-				(int) (width * 0.04), (int) (ll_height * 0.04));
-		iv_category_btn.setPadding((int) (width * 0.10),
-				(int) (ll_height * 0.04), (int) (width * 0.04),
-				(int) (ll_height * 0.11));
-		iv_woman_btn.setPadding((int) (width * 0.04), (int) (ll_height * 0.11),
-				(int) (width * 0.10), (int) (ll_height * 0.04));
-		iv_mypage_btn.setPadding((int) (width * 0.04),
-				(int) (ll_height * 0.04), (int) (width * 0.10),
-				(int) (ll_height * 0.11));
+		iv_man_btn.setPadding((int) (width * 0.10), (int) (ll_height * 0.11), (int) (width * 0.04), (int) (ll_height * 0.04));
+		iv_category_btn.setPadding((int) (width * 0.10), (int) (ll_height * 0.04), (int) (width * 0.04), (int) (ll_height * 0.11));
+		iv_woman_btn.setPadding((int) (width * 0.04), (int) (ll_height * 0.11), (int) (width * 0.10), (int) (ll_height * 0.04));
+		iv_mypage_btn.setPadding((int) (width * 0.04), (int) (ll_height * 0.04), (int) (width * 0.10), (int) (ll_height * 0.11));
 
 	}
 
@@ -453,20 +419,13 @@ public class MainActivity extends Activity implements OnTouchListener {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_BACK:
-			new AlertDialog.Builder(this)
-					.setTitle("�넫�굝利�")
-					.setMessage("�넫�굝利� 占쎈릭占쎈뻻野껋쥙�뮸占쎈빍繹먲옙?")
-					.setPositiveButton("占쎌굙",
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int whichButton) {
-									moveTaskToBack(true);
-									finish();
-									android.os.Process
-											.killProcess(android.os.Process
-													.myPid());
-								}
-							}).setNegativeButton("占쎈툡占쎈빍占쎌궎", null).show();
+			new AlertDialog.Builder(this).setTitle("�넫�굝利�").setMessage("�넫�굝利� 占쎈릭占쎈뻻野껋쥙�뮸占쎈빍繹먲옙?").setPositiveButton("占쎌굙", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int whichButton) {
+					moveTaskToBack(true);
+					finish();
+					android.os.Process.killProcess(android.os.Process.myPid());
+				}
+			}).setNegativeButton("占쎈툡占쎈빍占쎌궎", null).show();
 			return false;
 		default:
 			return false;
@@ -475,12 +434,9 @@ public class MainActivity extends Activity implements OnTouchListener {
 
 	public boolean isNetworkConnected(Context context) {
 		boolean isConnected = false;
-		ConnectivityManager manager = (ConnectivityManager) context
-				.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo mobile = manager
-				.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-		NetworkInfo wifi = manager
-				.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+		ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+		NetworkInfo wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
 		if (mobile.isConnected() || wifi.isConnected()) {
 			isConnected = true;
@@ -503,19 +459,15 @@ public class MainActivity extends Activity implements OnTouchListener {
 			if (upX < downX) {
 				m_viewFlipper.stopFlipping();
 				ll_flipper.stopFlipping();
-				m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(
-						context, R.anim.push_left_in));
-				m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(
-						context, R.anim.push_left_out));
+				m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.push_left_in));
+				m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.push_left_out));
 				m_viewFlipper.showPrevious();
 				ll_flipper.showPrevious();
 			} else if (upX > downX) {
 				m_viewFlipper.stopFlipping();
 				ll_flipper.stopFlipping();
-				m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(
-						context, R.anim.push_right_in));
-				m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(
-						context, R.anim.push_right_out));
+				m_viewFlipper.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.push_right_in));
+				m_viewFlipper.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.push_right_out));
 				m_viewFlipper.showPrevious();
 				ll_flipper.showPrevious();
 			}

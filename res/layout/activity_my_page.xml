@@ -33,7 +33,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imaon1"
+                android:id="@+id/btnMyPageTopBack"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="65"
@@ -189,7 +189,6 @@
                 android:orientation="vertical" >
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -198,7 +197,6 @@
         android:layout_weight="2"
         android:background="@color/line_color"
         android:orientation="vertical" >
-
     </LinearLayout>
 
     <LinearLayout
@@ -229,7 +227,6 @@
                 android:layout_weight="2"
                 android:background="@color/line_color"
                 android:orientation="vertical" >
-
             </LinearLayout>
 
             <Button
@@ -241,7 +238,6 @@
                 android:gravity="center"
                 android:text="고객센터"
                 android:textSize="17sp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -250,7 +246,6 @@
             android:layout_weight="2"
             android:background="@color/line_color"
             android:orientation="vertical" >
-
         </LinearLayout>
 
         <LinearLayout
@@ -275,7 +270,6 @@
                 android:layout_weight="2"
                 android:background="@color/line_color"
                 android:orientation="vertical" >
-
             </LinearLayout>
 
             <Button
@@ -287,9 +281,7 @@
                 android:gravity="center"
                 android:text="회원정보\n수정"
                 android:textSize="17sp" />
-
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -319,7 +311,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imautton5"
+                android:id="@+id/btnMyPageDownBack"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -333,7 +325,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/Iutton01"
+                android:id="@+id/btnMyPageHome"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -347,7 +339,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/Imtton02"
+                android:id="@+id/btnMyPageFavor"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
