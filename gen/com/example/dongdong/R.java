@@ -217,8 +217,6 @@ public final class R {
         public static final int white_blank=0x7f0200ae;
     }
     public static final class id {
-        public static final int ImageBtn77=0x7f0a0006;
-        public static final int ImageBtn88=0x7f0a0007;
         public static final int ImageButton01=0x7f0a0026;
         public static final int ImageButton02=0x7f0a0027;
         public static final int ImageButton77=0x7f0a0030;
@@ -235,6 +233,10 @@ public final class R {
         public static final int btRadio4=0x7f0a0057;
         public static final int btRadio5=0x7f0a0055;
         public static final int btRadio6=0x7f0a0058;
+        public static final int btnFavorDownBack=0x7f0a0005;
+        public static final int btnFavorFav=0x7f0a0007;
+        public static final int btnFavorHome=0x7f0a0006;
+        public static final int btnFavorUpBack=0x7f0a0000;
         public static final int btnMailDownBack=0x7f0a005b;
         public static final int btnMailHome=0x7f0a005c;
         public static final int btnMailProduct=0x7f0a005d;
@@ -275,9 +277,7 @@ public final class R {
         public static final int image2=0x7f0a00bf;
         public static final int image3=0x7f0a00c0;
         public static final int imageBtn3=0x7f0a0002;
-        public static final int imageBtn33=0x7f0a0000;
         public static final int imageBtn4=0x7f0a0003;
-        public static final int imageBtn99=0x7f0a0005;
         public static final int imageButton3=0x7f0a0022;
         public static final int imageButton33=0x7f0a0028;
         public static final int imageButton4=0x7f0a0023;

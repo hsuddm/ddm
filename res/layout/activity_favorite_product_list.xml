@@ -39,7 +39,7 @@
                 </LinearLayout>
 
                 <ImageButton
-                    android:id="@+id/imageBtn33"
+                    android:id="@+id/btnFavorUpBack"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="65"
@@ -201,7 +201,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageBtn99"
+                android:id="@+id/btnFavorDownBack"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -215,7 +215,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/ImageBtn77"
+                android:id="@+id/btnFavorHome"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"
@@ -229,7 +229,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/ImageBtn88"
+                android:id="@+id/btnFavorFav"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="55"

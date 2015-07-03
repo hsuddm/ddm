@@ -214,7 +214,5 @@ public class MailActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-		
-		
 	}
 }
