@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="cate">
+        <item>- Select Your Category -</item>
+        <item># Outer</item>
+        <item># Jeans</item>
+        <item># Coat</item>
+        <item># Dress</item>
+    </string-array>
+
+    <string-array name="material">
+        <item>- Select Your Material -</item>
+        <item># 나일론</item>
+        <item># 합성</item>
+        <item># 모직</item>
+    </string-array>
+    
+    <string-array name="e_mail">
+        <item>직접입력</item>
+        <item>"@"naver.com</item>
+        <item>"@"hanmail.net</item>
+        <item>"@"nate.com</item>
+        <item>"@"hotmail.com</item>
+        <item>"@"yahoo.com</item>
+        <item>"@"paran.com</item>
+    </string-array>
+    
+    <string-array name="check">
+        <item>본인인증</item>
+        <item>KT</item>
+        <item>SKT</item>
+        <item>LG U+</item>
+    </string-array>
+    <string-array name="building_name">
+        <item>건물명</item>
+        <item>DDP</item>
+        <item>DUTA</item>
+        <item>역사문화공원</item>
+    </string-array>
+    <string-array name="floor">
+        <item>층</item>
+        <item>1F</item>
+        <item>2F</item>
+        <item>3F</item>
+        <item>4F</item>
+        <item>5F</item>
+    </string-array>
+    <string-array name="number">
+        <item>호수</item>
+        <item>1호</item>
+        <item>2호</item>
+        <item>3호</item>
+    </string-array>
+</resources>

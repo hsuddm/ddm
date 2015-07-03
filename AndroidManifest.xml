@@ -1,0 +1,185 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dongdong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@drawable/icon4"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="intro.introActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="login.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="upload.UploadActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="search.SearchViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="clothes.DetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="reply.ReplyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="category.CategoryManActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="category.CategoryWomanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="join.MemberJoinActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="clothes.NewDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="upload.NewUploadActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="category.CategoryShopMallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="store.StoreListActivity" >
+        </activity>
+        <activity android:name="store.StoreInfoActivity" >
+        </activity>
+        <activity android:name="mypage.MyPageActivity" >
+        </activity>
+        <activity android:name="store.FavoriteProductListActivity" >
+        </activity>
+        <activity android:name="cunsumercenter.MailActivity" >
+        </activity>
+    </application>
+
+</manifest><!--
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dongdong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@drawable/icon4"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".introActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="login.LoginActivity"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SearchViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name=".ShopViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".DetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MainPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="reply.ReplyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CategoryManActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CategoryWomanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SpinnerDropdownActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SpinnerItemActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="join.MemberJoinActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="join.SellerJoinActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
+-->

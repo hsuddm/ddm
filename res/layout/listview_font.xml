@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_listviewfont"
+    android:textSize="15dp"
+    android:textColor="#000000"
+    android:background="#FFFFFF"
+    android:text="[공지사항]4/26일 동동앱 서비스 개시"
+    android:orientation="vertical"
+    android:textScaleX="0.9" >
+    
+
+</TextView>

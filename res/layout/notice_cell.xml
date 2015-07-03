@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:weightSum="1920" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:gravity="right"
+            android:paddingRight="5dp" >
+
+            <ImageView
+                android:id="@+id/iv_notice_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notice" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_notice_event"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="[공지]"
+                android:textColor="#000000"
+                android:textScaleX="0.9"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_notice_event_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:text="오픈 기념 이벤트."
+                android:textColor="#000000"
+                android:textScaleX="0.9"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_reg_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:text="24시간전"
+                android:textColor="#BDBDBD"
+                android:textScaleX="0.9"
+                android:textSize="7sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

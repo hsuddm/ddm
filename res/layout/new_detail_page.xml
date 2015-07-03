@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1920" >
+
+        <LinearLayout
+            android:id="@+id/newDatailTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="160"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_back_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/item_btn_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="#G방시라이더"
+                android:textColor="#000000"
+                android:textScaleX="0.9"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_share_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/item_btn_url" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_hash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="240"
+            android:background="@drawable/item_bar_tagbg"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_hash1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|bottom"
+                    android:text="#가죽자켓 #슬림핏 #인조가죽"
+                    android:textColor="#000000"
+                    android:textScaleX="0.9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_hash2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="#지드래곤 #대세점퍼"
+                    android:textColor="#000000"
+                    android:textScaleX="0.9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_hash3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|top"
+                    android:text="￦125,000원"
+                    android:textColor="#000000"
+                    android:textScaleX="0.9"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|top"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/iv_etc_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="matrix"
+                    android:src="@drawable/etc_btn" >
+                </ImageView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="540"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_front"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_blank_box_big" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_blank_box" />
+
+                    <ImageView
+                        android:id="@+id/iv_side"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_blank_box" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_detail1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_blank_box" />
+
+                    <ImageView
+                        android:id="@+id/iv_detail2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_blank_box" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reply_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="180"
+            android:background="@drawable/item_blank_box"
+            android:orientation="horizontal" >
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5" />
+
+            <customview.HorizontalListView
+                android:id="@+id/replyListView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" >
+            </customview.HorizontalListView>
+
+            <ImageView
+                android:id="@+id/iv_next_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/item_button_next" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_reply"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="625"
+            android:background="#F9F9F9" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="175"
+            android:background="#2C2C2C"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_reply_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_reply_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:src="@drawable/item_btn_reply" />
+
+                <TextView
+                    android:id="@+id/tv_reply_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/item_bar_menu" />
+
+            <ImageView
+                android:id="@+id/iv_like_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/item_btn_like1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                android:src="@drawable/item_bar_menu" />
+
+            <ImageView
+                android:id="@+id/iv_gostore_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/item_btn_gostore" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reply"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="350"
+            android:background="#2C2C2C"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.2"
+                    android:gravity="center_vertical" >
+
+                    <RatingBar
+                        android:id="@+id/rb_reply"
+                        style="@style/starRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="false"
+                        android:paddingTop="0dp"
+                        android:rating="3"
+                        android:stepSize="0.5" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_photo_upload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/item_bar_left"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/item_btn_photo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <customview.BackPressEditText
+                    android:id="@+id/et_reply_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.2"
+                    android:background="#2C2C2C"
+                    android:hint="댓글을 입력하세요..."
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_reply_upload"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8"
+                    android:background="@drawable/item_bar_top_left"
+                    android:gravity="center"
+                    android:text="입력"
+                    android:textColor="#ffffff"
+                    android:textScaleX="0.9"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

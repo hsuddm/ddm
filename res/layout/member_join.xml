@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:weightSum="1920" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="135" >
+
+        <ImageView
+            android:id="@+id/iv_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_join_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="회원가입"
+            android:textColor="#000000"
+            android:textScaleX="0.9"
+            android:textSize="19sp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="670"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="670" >
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40" />
+
+        <EditText
+            
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"
+            android:hint="이름"
+            android:id="@+id/et_name"
+            android:textColorHint="#8c8c8c"
+            android:textSize="15sp"
+            android:textScaleX="0.9"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:background="@drawable/gray_blank"
+            android:gravity="center_vertical" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"
+            >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2"
+            android:hint="이메일주소"
+            android:id="@+id/et_e_mail"
+            android:background="@drawable/gray_blank"
+            android:textColorHint="#8c8c8c"
+            android:textSize="15sp"
+            android:textScaleX="0.9"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:lines="1"
+            />
+        <Space 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+        <Spinner
+            android:id="@+id/sp_e_mail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_blank" />
+
+		</LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"
+            android:hint="비밀번호"
+            android:background="@drawable/gray_blank"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColorHint="#8c8c8c"
+            android:textScaleX="0.9"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:id="@+id/tv_warning"
+            android:text=" 영문/숫자 조합 6~16자리로 입력해 주세요."
+            android:textColor="#000000"
+            android:textSize="9.5sp"
+            android:textScaleX="0.9" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"
+            android:hint="비밀번호 확인"
+            android:background="@drawable/gray_blank"
+            android:inputType="textPassword"
+            android:id="@+id/et_repassword"
+            android:textColorHint="#8c8c8c"
+            android:textSize="15sp"
+            android:textScaleX="0.9"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLength="16" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="97"
+            >
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.2"
+            android:hint="휴대폰 번호(-없이입력)"
+            android:id="@+id/et_phone"
+            android:background="@drawable/gray_blank"
+            android:textColorHint="#8c8c8c"
+            android:textSize="15sp"
+            android:textScaleX="0.9"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:lines="1"
+            />
+        <Space 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/sp_personcheck"
+            android:background="@drawable/white_blank"
+            />
+		</LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="955"
+         android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:weightSum="955" >
+        <ImageView
+            android:id="@+id/iv_gray_line"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="63"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70"
+            android:orientation="horizontal"
+            >
+            <CheckBox 
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:button="@drawable/custom_check_box"/>
+			<LinearLayout
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:orientation="horizontal"
+			    android:paddingLeft="5dp"
+			    
+			    >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="서비스 이용약관"
+                android:textScaleX="0.8"
+                android:textSize="13sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/tv_agreement1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 및"
+                android:textScaleX="0.8"
+                android:textSize="13sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/tv_agreement2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 개인정보 보호정책"
+                android:textScaleX="0.8"
+                android:textSize="13sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/tv_agreement3"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 에 동의함."
+                android:textScaleX="0.8"
+                android:textSize="13sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:id="@+id/tv_agreement4"
+                />
+</LinearLayout>
+        </LinearLayout>
+         <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43" />
+      
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100"
+            android:text="회원가입"
+            android:id="@+id/tv_join"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textScaleX="0.9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="160"
+        android:background="#000000"
+        android:padding="5dp" >
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/backpage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+</LinearLayout>

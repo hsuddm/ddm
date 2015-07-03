@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1920" >
+
+    <LinearLayout
+        android:id="@+id/ll_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="220"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="10dp" >
+
+        <EditText
+            android:id="@+id/et_search_bar"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:gravity="left|center_vertical"
+            android:inputType="none"
+            android:paddingLeft="30dp"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/iv_search_btn"
+            android:layout_width="40dp"
+            android:layout_height="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1540"
+        android:background="#FFFFFF" >
+
+        <GridView
+            android:id="@+id/gridView"
+            android:listSelector="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="160"
+        android:background="#000000"
+        android:padding="5dp" >
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/backpage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+        <ImageView
+            android:id="@+id/favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+</LinearLayout>
